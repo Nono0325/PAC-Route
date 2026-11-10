@@ -105,7 +105,7 @@ impl NodeRegistry {
                 cpu_cores: 16,
                 total_ram_mb: 65536,
                 free_ram_mb: 48000,
-                token_speed_estimate: 75.0,
+                token_speed_estimate: 125.0,
             },
             supported_models: vec![
                 "llama3.2:3b".to_string(),
@@ -133,7 +133,7 @@ impl NodeRegistry {
                 cpu_cores: 8,
                 total_ram_mb: 32768,
                 free_ram_mb: 22000,
-                token_speed_estimate: 35.0,
+                token_speed_estimate: 60.0,
             },
             supported_models: vec!["llama3.2:3b".to_string(), "qwen2.5-coder:7b".to_string()],
             loaded_models: vec!["llama3.2:3b".to_string()],

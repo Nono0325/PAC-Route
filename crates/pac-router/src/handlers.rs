@@ -87,7 +87,7 @@ pub async fn chat_completions_handler(
         .get("x-sla-deadline-ms")
         .and_then(|v| v.to_str().ok())
         .and_then(|s| s.parse::<f64>().ok())
-        .unwrap_or(3000.0);
+        .unwrap_or(4000.0);
 
     let explicit_privacy = headers
         .get("x-privacy-level")

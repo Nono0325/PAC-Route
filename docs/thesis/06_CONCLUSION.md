@@ -32,3 +32,4 @@
 
 ### 3. 跨網段多叢集 Mesh 拓撲與動態頻寬感知
 目前的發現與協同主要聚焦於單一局域網（LAN）內部。未來可整合 Overlay Network 技術（如 Tailscale / WireGuard 與 Cloudflare Tunnels），建立跨地域、多個人叢集間之安全 Mesh 互聯拓撲，並導入基於 BBR 演算法之動態頻寬感知機制，使異地朋友或跨校實驗室間能安全地共享閒置算力。
+

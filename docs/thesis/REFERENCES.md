@@ -29,3 +29,4 @@
 [14] **REDMON, J., and FARHADI, A.** (2018). "YOLOv3: An Incremental Improvement." arXiv:1804.02767; updated with Ultralytics YOLOv8 (2023).
 
 [15] **ZHANG, T., KISHORE, V., WU, F., WEINBERGER, K. Q., and ARTZI, Y.** (2020). "BERTScore: Evaluating Text Generation with BERT." In *International Conference on Learning Representations (ICLR)*.
+

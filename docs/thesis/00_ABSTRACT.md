@@ -38,3 +38,4 @@ To address these challenges, this thesis presents **PAC-Route**, a high-concurre
 Empirical evaluations across a physical testbed comprising RTX 4090 workstations, RTX 3060 PCs, Raspberry Pi 5 boards, and cloud proxies demonstrate that PAC-Route reduces the SLA deadline miss rate by 82.4% and tail latency (P95) by 43.7% compared to homogeneous baseline schedulers, while guaranteeing zero data leakage under network disconnectivity and adversarial stress. This research establishes an essential, reliable, and privacy-preserving systems framework for personal distributed AI computing.
 
 **Keywords**: Personal AI Cluster, Heterogeneous Edge Computing, Privacy-Constrained Routing, Two-Plane Architecture, Service-Level Agreement (SLA), Dueling DDQN, Local Differential Privacy (LDP), Semantic Sketch Collaboration, Rust
+

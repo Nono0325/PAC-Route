@@ -196,3 +196,4 @@ pub struct PacInferenceResponse {
     pub completion_tokens: usize,
     pub created_at: DateTime<Utc>,
 }
+

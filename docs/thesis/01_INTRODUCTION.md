@@ -67,3 +67,4 @@
 * **第四章 演算法設計與 Rust 核心系統實作 (Implementation Details)**：展示三模式軟體閘門演算法、語義草圖產生與本地還原流程、Dueling DDQN 強化學習狀態動作轉移邏輯，以及 Rust 非同步網路代理模組架構。
 * **第五章 實驗評估與效能分析 (Experimental Evaluation)**：於實體混合硬體測試集上進行首字延遲（TTFT）、每字元延遲（TPOT）、P95 尾端延遲、SLA 違約率對比，並實施消融實驗（Ablation Study）與網路斷線隱私安全驗證。
 * **第六章 結論與未來研究方向 (Conclusion & Future Work)**：總結本研究成果與學術實務價值，並提出結合分散式 LoRA 微調與硬體安全隔離（TEE）之未來展望。
+

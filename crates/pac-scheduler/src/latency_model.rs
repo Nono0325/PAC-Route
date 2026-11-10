@@ -8,7 +8,7 @@ impl LatencyPredictor {
     /// 預測請求分配至特定節點的端到端耗時與各階段拆解
     pub fn predict(request: &PacInferenceRequest, node: &NodeInfo) -> LatencyBreakdown {
         let prompt_tokens = request.estimate_token_count();
-        let max_output_tokens = request.max_tokens.unwrap_or(256).min(512);
+        let max_output_tokens = request.max_tokens.unwrap_or(128).min(256);
 
         // 1. 估算傳輸延遲 T_trans: (Prompt 長度 / 估計頻寬) + 往返時延 RTT
         let prompt_bytes = request.prompt_text().len() as f64;
@@ -60,3 +60,4 @@ impl LatencyPredictor {
         }
     }
 }
+

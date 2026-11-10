@@ -42,13 +42,25 @@ async fn main() -> anyhow::Result<()> {
         discovery_service.start_listener().await;
     });
 
-    // 4. 定期清理離線無心跳節點 (心跳超時 30 秒標記為離線)
+    // 4. 定期維護示範節點心跳與清理離線節點
+    let heartbeat_registry = registry.clone();
+    tokio::spawn(async move {
+        let mut interval = tokio::time::interval(tokio::time::Duration::from_secs(5));
+        loop {
+            interval.tick().await;
+            heartbeat_registry.update_heartbeat("node_workstation_rtx4090", 0, 18432, 48000).await;
+            heartbeat_registry.update_heartbeat("node_edge_rtx3060", 1, 8192, 22000).await;
+            heartbeat_registry.update_heartbeat("node_sbc_rpi5", 0, 0, 5120).await;
+            heartbeat_registry.update_heartbeat("node_cloud_proxy", 0, 80000, 512000).await;
+        }
+    });
+
     let cleaner_registry = registry.clone();
     tokio::spawn(async move {
         let mut interval = tokio::time::interval(tokio::time::Duration::from_secs(15));
         loop {
             interval.tick().await;
-            cleaner_registry.clean_stale_nodes(30).await;
+            cleaner_registry.clean_stale_nodes(60).await;
         }
     });
 
@@ -82,3 +94,4 @@ async fn main() -> anyhow::Result<()> {
 
     Ok(())
 }
+

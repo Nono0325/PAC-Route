@@ -135,3 +135,4 @@ $$\tilde{x} = x + \text{Laplace}\left(0, \frac{\Delta f}{\epsilon_2}\right)$$
 **還原（Lossless Local Reconstruction）**：邊緣節點在完全隔離的記憶體空間中，藉由雙向雜湊映射表 $\mathcal{M}: \text{Placeholder} \to \text{Entity}$，執行無失真置換還原：
 $$y_{final} = \text{Unmask}(y_{sketch}, \mathcal{M})$$
 此機制在數學上保證了任何實體私鑰、真實姓名、IP 與機密數值「**零資訊量流入外部公網**」（即互資訊量 $I(X_{private}; Y_{cloud}) = 0$）。
+
