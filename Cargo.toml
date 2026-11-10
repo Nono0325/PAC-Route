@@ -1,0 +1,42 @@
+[workspace]
+members = [
+    "crates/pac-core",
+    "crates/pac-router",
+    "crates/pac-discovery",
+    "crates/pac-scheduler",
+    "crates/pac-privacy",
+    "crates/pac-node-agent",
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["You-Lin Chen <contact@nfu.edu.tw>"]
+license = "MIT OR Apache-2.0"
+description = "Privacy-Constrained Routing and Two-Plane Architecture for Heterogeneous Personal AI Clusters"
+repository = "https://github.com/Nono0325/PAC-Route"
+
+[workspace.dependencies]
+tokio = { version = "1.38", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+thiserror = "1.0"
+anyhow = "1.0"
+async-trait = "0.1"
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls", "stream"] }
+axum = { version = "0.7", features = ["macros"] }
+tower = "0.4"
+tower-http = { version = "0.5", features = ["cors", "trace"] }
+futures = "0.3"
+rand = "0.8"
+regex = "1.10"
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1.8", features = ["v4", "serde"] }
+
+pac-core = { path = "crates/pac-core" }
+pac-discovery = { path = "crates/pac-discovery" }
+pac-scheduler = { path = "crates/pac-scheduler" }
+pac-privacy = { path = "crates/pac-privacy" }
